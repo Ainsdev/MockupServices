@@ -1,15 +1,18 @@
 /* Real code starts here*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
 
 /* constants */
 :root {
     --primary-color: #f1faee;
-    --secondary-color: #e63946;
-    --foundal-color: #a8dadc;
+    --foundal-color: #e63946;
+    --secondary-color: #a8dadc;
     --background-color: #1d3557;
     --secondarybackground-color: #264672;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /* Dark Mode propeties*/
 body {
     font-family: "Montserrat",
@@ -28,7 +31,7 @@ h1 {
         blink .5s step-end infinite alternate;
     white-space: pre;
     overflow: hidden;
-    border-right: 3px solid;
+    border-right: 5px solid;
     font-family: "Montserrat";
     font-size: 2em;
 }
@@ -49,6 +52,7 @@ header {
     padding-left: 1%;
     display: flex;
     align-items: center;
+    z-index: 99;
     align-content: center;
     flex-flow: row wrap;
     position: sticky;
@@ -56,6 +60,7 @@ header {
     background-color: var(--secondarybackground-color);
     border-radius: 30px;
 }
+
 
 .header_menu {
     padding-left: 1%;
@@ -89,7 +94,7 @@ header {
 
 .btn_menu:hover {
     background-color: var(--secondary-color);
-    color: white;
+    color: black;
     transform: translateY(-7px);
 }
 
@@ -98,3 +103,79 @@ header {
 }
 
 /* Header end */
+/* Nav start */
+nav {
+    text-align: center;
+    border-bottom: #f1faee solid 2px;
+    transform: rotate(-2deg);
+    width: 55%;
+}
+
+.nav_cont {
+    margin-top: 7%;
+    /* display: flex; */
+    /* justify-content: center;
+    flex-flow: row wrap; */
+    /* gap: 35px; */
+}
+
+.nav_a {
+    margin: 0.8em;
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    border: var(--secondary-color) solid 5px;
+    color: var(--primary-color);
+    -webkit-box-shadow: -4px 7px 4px 0px rgba(0, 0, 0, 0.52);
+    box-shadow: -4px 7px 4px 0px rgba(0, 0, 0, 0.52);
+}
+
+.nav_a:hover {
+    background-color: var(--foundal-color);
+    border: var(--foundal-color) solid 5px;
+    transform: translateY(-7px);
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    color: black;
+    font-weight: bold;
+}
+
+.nav_cta {
+    padding-right: 7%;
+    margin-bottom: 9%;
+    transform: rotate(5deg);
+    text-align: right;
+}
+
+.nav_cta h2 {
+    font-size: 45px;
+    
+}
+.nav_cta h3 {
+    font-size: 25px;
+}
+
+.highlight {
+    background: linear-gradient(120deg, #ff0004 0%, #ff0004 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    background-position: 0 90%;
+}
+/* Nav end */
+.separator {
+
+}
+/* MAIN start */
+main {
+    padding-top: 5%;
+    background-color: var(--secondarybackground-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MAIN end */
