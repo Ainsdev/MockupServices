@@ -10,9 +10,11 @@
     --background-color: #1d3557;
     --secondarybackground-color: #264672;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 /* Dark Mode propeties*/
 body {
     font-family: "Montserrat",
@@ -50,6 +52,7 @@ h1 {
 
 header {
     padding-left: 1%;
+    margin-top: 1%;
     display: flex;
     align-items: center;
     z-index: 99;
@@ -57,7 +60,7 @@ header {
     flex-flow: row wrap;
     position: sticky;
     top: 0;
-    background-color: var(--secondarybackground-color);
+    background-color: black;
     border-radius: 30px;
 }
 
@@ -145,15 +148,16 @@ a {
 
 .nav_cta {
     padding-right: 7%;
-    margin-bottom: 9%;
+    margin-bottom: 10%;
     transform: rotate(5deg);
     text-align: right;
 }
 
 .nav_cta h2 {
     font-size: 45px;
-    
+
 }
+
 .nav_cta h3 {
     font-size: 25px;
 }
@@ -164,18 +168,87 @@ a {
     background-size: 100% 40%;
     background-position: 0 90%;
 }
-/* Nav end */
-.separator {
 
-}
+/* Nav end */
 /* MAIN start */
 main {
-    padding-top: 5%;
+    padding: 3%;
     background-color: var(--secondarybackground-color);
     border-radius: 15px;
     display: flex;
-    align-items: center;
+    height: auto;
+    align-items: flex-start;
     justify-content: center;
+    counter-reset: section;
 }
 
+/* Inicio start*/
+.main_inicio {
+    background-color: #1d3557;
+    border-radius: 15px;
+    display: grid;
+    width: 100%;
+    /* background-color: red; */
+    padding: 3%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 0px;
+}
+
+.inicio_h3 {
+    font-size: xx-large;
+    text-align: justify;
+}
+
+.inicio_p_1 {
+    text-align: start;
+    padding: 5%;
+    border-left: var(--secondary-color) 6px solid;
+    font-size: larger;
+}
+
+
+.inicio_p_2 {
+    border-top: var(--secondary-color) 6px solid;
+    border-right: var(--secondary-color) 6px solid;
+    border-bottom: var(--secondary-color) 6px solid;
+    padding: 5%;
+    text-align: end;
+}
+
+.inicio_p_3 {
+    margin-right: 50%;
+    padding: 5%;
+    text-align: start;
+    border-left: var(--secondary-color) 6px solid;
+
+}
+
+.inicio_p_4 {
+    padding: 5%;
+    border-right: var(--secondary-color) 6px solid;
+    border-top: var(--secondary-color) 6px solid;
+    text-align: end;
+}
+
+.inicio_p_1::before {
+    counter-increment: section;
+    content: counter(section);
+}
+
+.inicio_p_2::before {
+    counter-increment: section;
+    content: counter(section);
+}
+
+.inicio_p_3::before {
+    counter-increment: section;
+    content: counter(section);
+}
+
+.inicio_p_4::before {
+    counter-increment: section;
+    content: counter(section);
+}
+
+/* Inicio end */
 /* MAIN end */
