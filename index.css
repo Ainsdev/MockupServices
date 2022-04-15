@@ -1,0 +1,100 @@
+/* Real code starts here*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/* constants */
+:root {
+    --primary-color: #f1faee;
+    --secondary-color: #e63946;
+    --foundal-color: #a8dadc;
+    --background-color: #1d3557;
+    --secondarybackground-color: #264672;
+}
+
+/* Dark Mode propeties*/
+body {
+    font-family: "Montserrat",
+        Arial,
+        sans-serif;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    padding: 0px 10px 10px 10px;
+    color: var(--primary-color);
+}
+
+/* Header start*/
+h1 {
+    width: 22ch;
+    animation: typing 2s steps(22),
+        blink .5s step-end infinite alternate;
+    white-space: pre;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: "Montserrat";
+    font-size: 2em;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+header {
+    padding-left: 1%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-flow: row wrap;
+    position: sticky;
+    top: 0;
+    background-color: var(--secondarybackground-color);
+    border-radius: 30px;
+}
+
+.header_menu {
+    padding-left: 1%;
+    height: max-content;
+    flex-grow: 1;
+
+}
+
+.header_title {
+    height: max-content;
+    flex-grow: 1;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.btn_menu {
+    font-size: 12px;
+    padding: 1.3em 3em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: black;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    outline: none;
+    border: none;
+}
+
+.btn_menu:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-7px);
+}
+
+.btn_menu:active {
+    transform: translateY(-1px);
+}
+
+/* Header end */
